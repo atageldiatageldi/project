@@ -1,0 +1,194 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 150px;
+    z-index: 1000;
+    
+    // navbar extra
+    .navbar{
+        box-shadow: 0 5px 10px rgba(0,0,0, .1);
+        background-color: #fff;
+        .container{
+            margin: 0 auto;
+            padding: 0 15px;
+            .menu_content{
+                // navbar toggle
+                .navbar-header{
+                    display: none;
+                    float: right;
+                    #check{
+                        display: none;
+                    }
+                    label{
+                        padding: 9px 10px;
+                    }
+                    span{
+                        cursor: pointer;
+                        background-color: #888;
+                        width: 22px;
+                        height: 2px;
+                        display: block;
+                        margin: 2px 0;
+                    }
+                    @media (max-width:992px){
+                        display: block;
+                    }
+                }
+
+                // navbar intra
+                .navbar-collapse{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+
+                    // navbardaky ul li a-hreflerin ahlisini icine alyar
+                    ul{
+                        li{
+                            position: relative;
+                            a{
+                                color: #444;
+                                font-size: 11px;
+                                display: block;
+                                font-weight: bold;
+                                letter-spacing: 1;
+                                &:hover{
+                                    color: #da521e
+                                }
+                            }
+                        }
+                    }
+    
+                    // navbaryn icindaki knopkalar iki bolege bolunyar olar: pull-left (cep tarap) we pull-right(sag tarap)
+                    // cep tarap
+                    .pull-left{
+                        li{
+                            float: left;
+                            &:hover{
+                                ul{
+                                    display: initial;
+                                    li>ul{
+                                        display: none;
+                                        li>a{
+                                            color: #444;
+                                        }
+                                    }
+                                }
+                            }
+                            a{
+                                text-transform: uppercase;
+                                padding: 20px 12px;
+                            }
+                            ul{
+                                position: absolute;
+                                left: 0;
+                                width: 200px;
+                                background-color: #fff;
+                                display: none;
+                                li{
+                                    width: 100%;
+                                    border-top: 1px solid rgba(0,0,0, .1);
+                                    a{
+                                       padding: 20px 12px; 
+                                    }
+                                    &:hover{
+                                        background-color: #da521e;
+                                        a{
+                                            color: #fff;
+                                        }
+                                        ul{
+                                            display: initial;
+                                            li:hover>a{
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                    ul{
+                                        left: 200px;
+                                        top: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &::before{
+                            display: table;
+                            content: "";
+                        }
+                    }
+
+                    // sag tarap
+                    .pull-right{
+                        li{
+                            display: inline-block;
+                            a{
+                                img{
+                                    display: inline-block;
+                                    width: 18px;
+                                    padding: 20px 0 20px 4px;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width:992px) {
+                        display: block;
+                        .p{
+                            display: none;
+                            width: 100%;
+                            &:hover{
+                                ul{
+                                    position: relative;
+                                    width: 100%;
+                                    li{
+                                        background-color: #fff;
+                                        ul{
+                                            width: 100%;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .pull-right{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            // @media (min-width:768px) {
+            //     width: 750px;
+            // }
+            @media (min-width:992px) {
+                width: 970px;
+            }
+            @media (min-width:1200px) {
+                width: 1170px;
+            }
+            #check:checked ~ .p{
+                display: block;
+            }
+        }
+        @media (max-width:992px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+        }
+    }
+
+    // logo
+    .kotho-logo{
+        text-align: center;
+        h1{
+            margin: 48px auto 55px;
+            font-size: 36px;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.containerr{
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    box-shadow: 0 6px 4px 6px rgba(51, 51, 51, 0.08);
+    margin-top: 30px;
+    text-align: center;
+    .contain_up{
+        h2{
+            overflow: hidden;
+            color: #444;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            padding: 28px 0 16px;
+            font-weight: 500;
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            a{
+                background-color: transparent;
+                color: #444;
+                text-decoration: none;
+                transition: all 0.33s;
+                line-height: 1.4;
+                font-weight: 700;
+            }
+        }
+    }
+    .contain_down{
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        .contain-insta{
+            width: 100%;
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none; 
+            .insta-sections{
+                // 8 sany containler
+                display: grid;
+                grid-template-columns: repeat(8,1fr);
+                font-family: "Lato", sans-serif;
+                font-size: 15px;
+
+                .contains1,
+                .contains2,
+                .contains3,
+                .contains4,
+                .contains5,
+                .contains6,
+                .contains7,
+                .contains8{
+                    float: left;
+                    height: 100%;
+                    min-height: 1px;
+
+                    // conteinerlerin ici 
+                    .contains_in{
+                        position: relative;
+                        display: block;
+
+                        // basdaky gorunyan bolegi
+                        a{
+                            img{
+                                width: 100%;
+                                max-width: 100%;
+                            }
+                        }
+
+                        // hover bolanda gorunyan bolegi
+                        .insta-overlay{
+                            display: none;
+                        }
+                    }
+                }
+
+                @media (max-width:992px) {
+                    width: 150%;
+                }
+                @media (max-width:467px) {
+                    width: 400%;
+                }
+            }
+        }
+    }
+}
