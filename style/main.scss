@@ -1,0 +1,29 @@
+// header
+@use "./contents/header";
+// section content
+@use "./contents/content";
+// section container
+@use "./contents/container";
+// footer
+@use "./contents/footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #444;
+    font-family: "Lato", sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
